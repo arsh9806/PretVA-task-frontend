@@ -1,6 +1,9 @@
-Check out deployed version [HERE](https://pretva-front-end.herokuapp.com/) 
+Check out deployed frontend version [HERE](https://pretva-front-end.herokuapp.com/) 
+
+For deployed version of backend app check [HERE](https://pretva--backend.herokuapp.com/)
 
 [Link to backend repo](https://github.com/arsh9806/PretVA-task-backend)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
