@@ -14,7 +14,7 @@ function Topbar() {
 				<Navbar className="navbar border-10 px-0" expand="lg" sticky="top">
 
 					<Navbar.Brand href="#home">
-						<img id="brand-image" src="http://www.pretva.com/static/media/logo.cd273745.png" alt="PretVA" />
+						<img id="brand-image" src="pretva.png" alt="PretVA" />
 					</Navbar.Brand>
 
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
