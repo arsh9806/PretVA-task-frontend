@@ -1,6 +1,7 @@
 .infoCards {
     margin: 20px 5vw !important;
     color: rgb(18, 77, 81);
+    min-height: 500px;
     /* justify-content: space-evenly; */
 }
 .info-card {
@@ -28,4 +29,10 @@
     .infoCards {
         font-size: 0.9rem;
     }
+}
+
+.MuiCircularProgress-root {
+    width: 80px !important;
+    height: 80px !important;
+    color: rgb(18, 77, 81) !important;
 }
