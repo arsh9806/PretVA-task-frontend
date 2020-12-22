@@ -62,8 +62,8 @@ function InfoCards() {
 		<Row className="infoCards" >
 
 			{
-				cards.map(card => (
-					<Col lg="4" md="6" className="my-3">
+				cards.map((card,index) => (
+					<Col key={index} lg="4" md="6" className="my-3">
 						<div className="info-card p-lg-4 p-3">
 							<Row className="mb-1">
 								<Col xs="5">
