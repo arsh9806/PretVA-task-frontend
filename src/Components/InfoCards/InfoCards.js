@@ -36,11 +36,16 @@ function InfoCards() {
 					url += `productName=${filters[2]}`;
 				}
 				const data = await axios.get(`/buyers${url}`);
-				setCards(data.data);
+				if(data.data.length !== 0 ){
+					setCards(data.data);
+
+				}
+				else{
+					setCards(0);
+				}
 			}
 			else {
 				const data = await axios.get(`/buyers`);
-
 				setCards(data.data);
 				let products = new Set();
 				data.data.forEach(product => {
@@ -61,7 +66,7 @@ function InfoCards() {
 		<Row className="infoCards" >
 
 			{
-				cards.length === 0 ? <CircularProgress className="mx-auto mt-4 loading"/>  : 
+				cards ? cards.length === 0 ? <CircularProgress className="mx-auto mt-4 loading"/>  : 
 					cards.map((card, index) => (
 						<Col key={index} lg="4" md="6" className="my-3">
 							<div className="info-card p-lg-4 p-3">
@@ -124,7 +129,7 @@ function InfoCards() {
 
 							</div>
 						</Col>
-					))
+					)) : <h2 className="mx-auto">No Data Found :(</h2>
 			}
 
 		</Row>
