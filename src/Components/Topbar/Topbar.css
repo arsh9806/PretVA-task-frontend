@@ -1,0 +1,30 @@
+#brand-image {
+    height: 60px;
+}
+.bell-icon {
+    cursor: pointer;
+    color: #124d51;
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
+.border-10 {
+    border-bottom: 8px solid rgb(175, 178, 193) !important;
+}
+.active {
+    background-color: rgb(253, 236, 148) !important;
+}
+
+.rounded-border {
+    border: 3px solid #124d51;
+    border-radius: 10px;
+}
+
+#myAccount {
+    color: #124d51;
+}
+
+#logout__button {
+    background-color: #124d51;
+    color: white;
+    font-weight: bold;
+}

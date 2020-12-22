@@ -1,0 +1,146 @@
+.breadCrumb {
+    color: rgb(18, 77, 81);
+    font-size: 1.25em;
+    padding: 1vw;
+    margin: 2vw;
+}
+@media (max-width: 400px) {
+    .breadCrumb {
+        font-size: 1.1rem;
+    }
+}
+
+.filterButtons {
+    color: rgb(18, 77, 81);
+    border: 3px solid rgb(18, 77, 81);
+    border-radius: 30px;
+    background-color: white;
+}
+.filterButtons:focus {
+    outline: none;
+}
+.selected {
+    background-color: rgb(253, 236, 148);
+    border-width: 4px;
+    font-weight: bold;
+}
+#supplierButton {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#buyerButton {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Filter box */
+
+.filters {
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 8px;
+    color: rgb(18, 77, 81);
+}
+.filters > h5 {
+    padding: 20px;
+}
+
+.filter-options .dropdown-items,
+.dropdown-items__button {
+    border: none !important;
+    background: white !important;
+    color: inherit !important;
+    text-align: center;
+}
+.filter-options .dropdown-items:focus {
+    outline: none;
+    box-shadow: none !important;
+    color: inherit;
+}
+.dropdown-item {
+    cursor: pointer;
+}
+.dropdown-items {
+    cursor: pointer;
+    padding: 20px;
+}
+.dropdown-items p {
+    margin: 0;
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+.dropdown-items__button {
+    display: flex;
+    align-items: flex-end;
+}
+.dropdown-menu {
+    top: 90% !important;
+    left: 20px !important;
+}
+#apply-filters-button,
+#post-product-req {
+    background-color: white;
+    color: rgb(18, 77, 81);
+    border: 3px solid rgb(18, 77, 81);
+    border-radius: 20px;
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    padding: 5px 20px;
+}
+#apply-filters-button:focus {
+    outline: none;
+}
+
+/* buyer name search */
+
+#post-product-req {
+    max-width: 350px;
+    padding: 0 10px;
+    min-height: 40px;
+}
+#post-product-req:focus {
+    outline: none;
+}
+#basic-addon1 {
+    background-color: rgb(18, 77, 81);
+    border: 1px solid rgb(18, 77, 81);
+}
+input.form-control {
+    border: 3px solid rgb(18, 77, 81);
+}
+input.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 3px solid rgb(18, 77, 81);
+
+}
+.MuiSvgIcon-root {
+    cursor: pointer;
+}
+
+#applied-filters {
+    margin: 20px 5vw !important;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding: 20px 0;
+    color: rgb(18, 77, 81);
+}
+#applied-filters > p {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.pill {
+    font-weight: 500;
+    margin: 3px 8px;
+    border-radius: 20px;
+    padding: 8px;
+    border: 2px solid rgb(224, 224, 224);
+    background-color: rgb(223, 223, 223);
+}
+.dropdown-items.active {
+    background-color: rgb(253, 236, 148) !important;    
+}
+.immutable {
+    cursor: not-allowed;
+}
