@@ -1,5 +1,4 @@
 import './App.css';
-import axios from 'axios';
 import FilterBox from './Components/FilterBox/FilterBox';
 import Footer from './Components/Footer/Footer';
 import InfoCards from './Components/InfoCards/InfoCards';
@@ -10,7 +9,6 @@ function App() {
     <div className="App">
       {/* Navbar */}
       <Topbar/>
-      {console.log()}
       {/* Filter  */}
       <FilterBox/>
       {/* Cards */}

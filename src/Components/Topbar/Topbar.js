@@ -22,10 +22,10 @@ function Topbar() {
 					<Navbar.Collapse id="basic-navbar-nav">
 
 						<Nav className="mx-auto">
-							<Nav.Link onClick={() => setSelectedRoute(1)} className={`px-4 ${selectedRoute == 1 ? 'active' : ''}`} >About</Nav.Link>
-							<Nav.Link onClick={() => setSelectedRoute(2)} className={`px-4 ${selectedRoute == 2 ? 'active' : ''}`} >Services</Nav.Link>
-							<Nav.Link onClick={() => setSelectedRoute(3)} className={`px-4 ${selectedRoute == 3 ? 'active' : ''}`} >Search</Nav.Link>
-							<Nav.Link onClick={() => setSelectedRoute(4)} className={`px-4 ${selectedRoute == 4 ? 'active' : ''}`} >Feedback & Support</Nav.Link>
+							<Nav.Link onClick={() => setSelectedRoute(1)} className={`px-4 ${selectedRoute === 1 ? 'active' : ''}`} >About</Nav.Link>
+							<Nav.Link onClick={() => setSelectedRoute(2)} className={`px-4 ${selectedRoute === 2 ? 'active' : ''}`} >Services</Nav.Link>
+							<Nav.Link onClick={() => setSelectedRoute(3)} className={`px-4 ${selectedRoute === 3 ? 'active' : ''}`} >Search</Nav.Link>
+							<Nav.Link onClick={() => setSelectedRoute(4)} className={`px-4 ${selectedRoute === 4 ? 'active' : ''}`} >Feedback & Support</Nav.Link>
 						</Nav>
 
 

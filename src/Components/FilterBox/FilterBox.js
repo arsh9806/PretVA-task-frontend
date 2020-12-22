@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, InputGroup, FormControl, Container } from "react-bootstrap";
+import { Row, Col, InputGroup, FormControl } from "react-bootstrap";
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -36,14 +36,12 @@ export default function FilterBox() {
 	}
 
 	function setProductNameFilter(e) {
-		console.log(e.target.innerText);
 		setProductName(e.target.innerText)
 		setToggleDropdown(!toggleDropdown);
 	}
 
 
 	function setSortByFilter(e) {
-		console.log(sortBy == "price_rs" ? '' : sortBy);
 		if (e.target.innerText === "Cost") {
 			setSortBy("price_rs");
 		}
@@ -56,7 +54,7 @@ export default function FilterBox() {
 
 	function setSortAndProduct() {
 		let temp = filters;
-		if (sortBy != "") {
+		if (sortBy !== "") {
 			temp[1] = sortBy;
 
 		}
@@ -64,7 +62,7 @@ export default function FilterBox() {
 			temp[1] = 0;
 		}
 
-		if (productName != "") {
+		if (productName !== "") {
 			temp[2] = productName;
 		}
 		else {
@@ -74,7 +72,6 @@ export default function FilterBox() {
 			type: 'SET_FILTERS',
 			filters: [...temp]
 		})
-		console.log(temp);
 
 	}
 	function handleChange(e) {
@@ -95,10 +92,10 @@ export default function FilterBox() {
 			let temp = filters;
 			let toRemove = filters.indexOf(i)
 			temp[toRemove] = 0;
-			if (toRemove == 0) {
+			if (toRemove === 0) {
 				setBuyerName("");
 			}
-			else if (toRemove == 1) {
+			else if (toRemove === 1) {
 				setSortBy("");
 			}
 			else {
@@ -110,22 +107,7 @@ export default function FilterBox() {
 				filters: [...temp]
 			})
 		}
-		console.log(filters, filters.indexOf(i))
-		console.log("remove ", i)
-		// if( i == 3 ){
-		// 	dispatch({
-		// 		type: 'SET_FILTERS',
-		// 		filters : [0,0,0]
-		// 	})
-		// }
-		// else{
-		// 	let temp = filters;
-		// 	temp[i] = 0;
-		// 	dispatch({
-		// 		type: 'SET_FILTERS',
-		// 		filters : [...temp]
-		// 	})
-		// }
+		
 	}
 
 	return (
@@ -143,10 +125,10 @@ export default function FilterBox() {
 
 			<Row className="mx-0">
 				<Col className="d-flex justify-content-center align-items-center">
-					<button onClick={() => setSelectedButton(1)} id="supplierButton" className={`mr-2 p-3 filterButtons ${selectedButton == 1 && 'selected'}`}>
+					<button onClick={() => setSelectedButton(1)} id="supplierButton" className={`mr-2 p-3 filterButtons ${selectedButton === 1 && 'selected'}`}>
 						Search Supplier Products
 						</button>
-					<button onClick={() => setSelectedButton(2)} id="buyerButton" className={`p-3 filterButtons ${selectedButton == 2 && 'selected'}`}>
+					<button onClick={() => setSelectedButton(2)} id="buyerButton" className={`p-3 filterButtons ${selectedButton === 2 && 'selected'}`}>
 						Search Buyer Requirements
 						</button>
 				</Col>
@@ -159,23 +141,23 @@ export default function FilterBox() {
 					<div className="filter-options d-flex align-items-baseline justify-content-around flex-wrap flex-md-nowrap">
 						<div className="dropdown-items">
 							<p className="dropdown-toggle" id="dropdownMenuButton" onClick={() => setToggleDropdown(!toggleDropdown)}>
-								{productName != "" ? productName : 'Products'}<ArrowDropDownIcon />
+								{productName !== "" ? productName : 'Products'}<ArrowDropDownIcon />
 							</p>
 							<div className={`dropdown-menu ${toggleDropdown && 'd-block'}`} aria-labelledby="dropdownMenuButton">
 								{
 									products.map((product, index) => {
 
-										return <a key={index} onClick={setProductNameFilter} className="dropdown-item">{product}</a>
+										return <p  key={index} onClick={setProductNameFilter} className="dropdown-item">{product}</p>
 									}
 									)
 								}
 							</div>
 						</div>
-						<div onClick={setSortByFilter} className={`dropdown-items ${sortBy == "price_rs" ? 'active' : ''}`}>
+						<div onClick={setSortByFilter} className={`dropdown-items ${sortBy === "price_rs" ? 'active' : ''}`}>
 							<p>Cost
 							</p>
 						</div>
-						<div onClick={setSortByFilter} className={`dropdown-items ${sortBy == "quantity" ? 'active' : ''}`}>
+						<div onClick={setSortByFilter} className={`dropdown-items ${sortBy === "quantity" ? 'active' : ''}`}>
 							<p>Quantity
 							</p>
 						</div>
@@ -231,13 +213,16 @@ export default function FilterBox() {
 
 							if (filter) {
 								return (<div key={i} className="pill">
-									<p className="mb-0">{filter == 'price_rs' ? 'Cost' : filter} <CloseIcon onClick={() => removeFilter(filter)} /></p>
+									<p className="mb-0">{filter === 'price_rs' ? 'Cost' : filter} <CloseIcon onClick={() => removeFilter(filter)} /></p>
 								</div>)
+							}
+							else {
+								return "";
 							}
 						})
 					}
 					{
-						filters[0] === filters[1] && filters[1] == filters[2] ? '--' : (
+						filters[0] === filters[1] && filters[1] === filters[2] ? '--' : (
 							<div className="pill">
 								<p className="mb-0">Clear All <CloseIcon onClick={() => removeFilter('clear')} /></p>
 							</div>

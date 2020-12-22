@@ -14,7 +14,7 @@ import { CircularProgress } from '@material-ui/core';
 
 function InfoCards() {
 	const [cards, setCards] = useState([]);
-	const [{ filters, products }, dispatch] = useDataLayerValue();
+	const [{ filters }, dispatch] = useDataLayerValue();
 
 
 
@@ -22,7 +22,7 @@ function InfoCards() {
 		setCards([]);
 		(async function abc() {
 			let url = "";
-			if (new Set(filters).size != 1) {
+			if (new Set(filters).size !== 1) {
 				if (filters[0]) {
 					url += url === "" ? "?" : "&";
 					url += `buyerName=${filters[0]}`;
@@ -36,19 +36,16 @@ function InfoCards() {
 					url += `productName=${filters[2]}`;
 				}
 				const data = await axios.get(`/buyers${url}`);
-				console.log(data.data)
 				setCards(data.data);
 			}
 			else {
 				const data = await axios.get(`/buyers`);
-				console.log(data.data)
 
 				setCards(data.data);
 				let products = new Set();
 				data.data.forEach(product => {
 					products.add(product.product_name);
 				});
-				console.log(products);
 				dispatch({
 					type: 'SET_PRODUCTS',
 					products: Array.from(products)
@@ -57,14 +54,14 @@ function InfoCards() {
 
 
 		})();
-	}, [filters])
+	}, [filters,dispatch])
 
 
 	return (
 		<Row className="infoCards" >
 
 			{
-				cards.length == 0 ? <CircularProgress className="mx-auto mt-4 loading"/>  : 
+				cards.length === 0 ? <CircularProgress className="mx-auto mt-4 loading"/>  : 
 					cards.map((card, index) => (
 						<Col key={index} lg="4" md="6" className="my-3">
 							<div className="info-card p-lg-4 p-3">
