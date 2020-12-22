@@ -223,7 +223,7 @@ export default function FilterBox() {
 					}
 					{
 						filters[0] === filters[1] && filters[1] === filters[2] ? '--' : (
-							<div className="pill">
+							<div className="pill dark-pill">
 								<p className="mb-0">Clear All <CloseIcon onClick={() => removeFilter('clear')} /></p>
 							</div>
 						)
