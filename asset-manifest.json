@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/PretVA-task-frontend/static/css/main.c02e827e.chunk.css",
+    "main.js": "/PretVA-task-frontend/static/js/main.d99fa696.chunk.js",
+    "main.js.map": "/PretVA-task-frontend/static/js/main.d99fa696.chunk.js.map",
+    "runtime-main.js": "/PretVA-task-frontend/static/js/runtime-main.058d5fa1.js",
+    "runtime-main.js.map": "/PretVA-task-frontend/static/js/runtime-main.058d5fa1.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/PretVA-task-frontend/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.9d78cbdb.chunk.js": "/PretVA-task-frontend/static/js/2.9d78cbdb.chunk.js",
+    "static/js/2.9d78cbdb.chunk.js.map": "/PretVA-task-frontend/static/js/2.9d78cbdb.chunk.js.map",
+    "static/js/3.f52f5321.chunk.js": "/PretVA-task-frontend/static/js/3.f52f5321.chunk.js",
+    "static/js/3.f52f5321.chunk.js.map": "/PretVA-task-frontend/static/js/3.f52f5321.chunk.js.map",
+    "index.html": "/PretVA-task-frontend/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/PretVA-task-frontend/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.c02e827e.chunk.css.map": "/PretVA-task-frontend/static/css/main.c02e827e.chunk.css.map",
+    "static/js/2.9d78cbdb.chunk.js.LICENSE.txt": "/PretVA-task-frontend/static/js/2.9d78cbdb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.058d5fa1.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.9d78cbdb.chunk.js",
+    "static/css/main.c02e827e.chunk.css",
+    "static/js/main.d99fa696.chunk.js"
+  ]
+}
